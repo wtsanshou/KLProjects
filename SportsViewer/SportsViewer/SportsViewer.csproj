@@ -44,23 +44,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FileMagr\FileLoader.cs">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="FileMagr\JsonLoader.cs">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
+    <Compile Include="FileMagr\FileLoader.cs" />
+    <Compile Include="FileMagr\JsonLoader.cs" />
     <Compile Include="Models\Athlete.cs" />
     <Compile Include="Models\Squad.cs" />
     <Compile Include="Models\RugbyTeam.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TeamMagr\RugbyTeamManagement.cs">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="TeamMagr\TeamManagement.cs">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
+    <Compile Include="TeamMagr\RugbyTeamManagement.cs" />
+    <Compile Include="TeamMagr\TeamManagement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

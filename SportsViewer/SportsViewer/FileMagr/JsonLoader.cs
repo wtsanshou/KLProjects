@@ -24,7 +24,7 @@ namespace SportsViewer.FileMagr
                     rugbyTeams = JsonConvert.DeserializeObject<Team>(json);
                 }
             }
-            catch (FileNotFoundException fe)
+            catch (FileNotFoundException)
             {
                 Console.WriteLine("Can't find this file! Please Enter again!");
             }
