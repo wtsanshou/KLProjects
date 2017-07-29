@@ -7,3 +7,10 @@ C:\Users\Tao\Documents\GitHub\KLProjects\SportsViewer\SportsViewer\bin\Debug\New
 C:\Users\Tao\Documents\GitHub\KLProjects\SportsViewer\SportsViewer\obj\Debug\SportsViewer.csprojResolveAssemblyReference.cache
 C:\Users\Tao\Documents\GitHub\KLProjects\SportsViewer\SportsViewer\obj\Debug\SportsViewer.exe
 C:\Users\Tao\Documents\GitHub\KLProjects\SportsViewer\SportsViewer\obj\Debug\SportsViewer.pdb
+C:\Users\Tao\Documents\GitHub\KLProjects\SportsViewer\SportsViewer\bin\Debug\Files\rugby_athletes.txt
+C:\Users\Tao\Documents\GitHub\KLProjects\SportsViewer\SportsViewer\bin\Debug\FileMagr\FileLoader.cs
+C:\Users\Tao\Documents\GitHub\KLProjects\SportsViewer\SportsViewer\bin\Debug\FileMagr\JsonLoader.cs
+C:\Users\Tao\Documents\GitHub\KLProjects\SportsViewer\SportsViewer\bin\Debug\TeamMagr\RugbyTeamManagement.cs
+C:\Users\Tao\Documents\GitHub\KLProjects\SportsViewer\SportsViewer\bin\Debug\TeamMagr\TeamManagement.cs
+C:\Users\Tao\Documents\GitHub\KLProjects\SportsViewer\SportsViewer\bin\Debug\Files\empty.json
+C:\Users\Tao\Documents\GitHub\KLProjects\SportsViewer\SportsViewer\bin\Debug\Files\rugby_athletes_half.json
