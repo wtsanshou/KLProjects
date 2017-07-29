@@ -1,1 +1,9 @@
 C:\Users\Tao\Documents\GitHub\KLProjects\SportsViewer\SportsViewer\bin\Debug\SportsViewer.exe.config
+C:\Users\Tao\Documents\GitHub\KLProjects\SportsViewer\SportsViewer\bin\Debug\Files\rugby_athletes.json
+C:\Users\Tao\Documents\GitHub\KLProjects\SportsViewer\SportsViewer\bin\Debug\SportsViewer.exe
+C:\Users\Tao\Documents\GitHub\KLProjects\SportsViewer\SportsViewer\bin\Debug\SportsViewer.pdb
+C:\Users\Tao\Documents\GitHub\KLProjects\SportsViewer\SportsViewer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Tao\Documents\GitHub\KLProjects\SportsViewer\SportsViewer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Tao\Documents\GitHub\KLProjects\SportsViewer\SportsViewer\obj\Debug\SportsViewer.csprojResolveAssemblyReference.cache
+C:\Users\Tao\Documents\GitHub\KLProjects\SportsViewer\SportsViewer\obj\Debug\SportsViewer.exe
+C:\Users\Tao\Documents\GitHub\KLProjects\SportsViewer\SportsViewer\obj\Debug\SportsViewer.pdb

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SportsViewer.Models
 {
-    class RugbyTeam
+    class Team
     {
         public List<Athlete> athletes { get; set; }
 
