@@ -14,10 +14,7 @@ namespace SportsViewer.TeamMagr
         private List<Athlete>[] rugbyAthletes;
 
         private const int POSITION_NUM = 10;
-
         private string[] Positions = { "prop", "hooker", "lock", "flanker", "number-eight", "scrum-half", "out-half", "Centre", "winger", "full-back" };
-
-        private int[] aTeam = { 2, 1, 2, 2, 1, 1, 1, 2, 2, 1 };
 
         private List<List<string>> readyPositions;
 
@@ -28,48 +25,62 @@ namespace SportsViewer.TeamMagr
             this.rugbyTeam = rugbyTeam;
         }
 
-        public void ClassifyPositions()
+        public void OrganizeSquads()
+        {
+
+            ClassifyAthletesBy();
+
+            int[] aTeam = { 2, 1, 2, 2, 1, 1, 1, 2, 2, 1 };
+            ShowSquads(aTeam);
+        }
+
+        private void ClassifyAthletesBy()
         {
             //Could use Factory pattern in the future
+            CreateClassifiedAthletes();
+
+            Classify(rugbyAthletes, rugbyTeam);
+        }
+
+        private void CreateClassifiedAthletes()
+        {
             rugbyAthletes = new List<Athlete>[POSITION_NUM];
             for (int p = 0; p < POSITION_NUM; ++p)
             {
                 rugbyAthletes[p] = new List<Athlete>();
             }
-
-            ClassifyPositions(rugbyAthletes, rugbyTeam);
         }
 
-        private void ClassifyPositions(List<Athlete>[] rugbyAthletes, Team rubyTeam)
+        private void Classify(List<Athlete>[] rugbyAthletes, Team rugbyTeam)
         {
-            for (int i = 0; i < rubyTeam.athletes.Count; ++i)
+            for (int i = 0; rugbyTeam != null && i < rugbyTeam.athletes.Count; ++i)
             {
-                for (int p = 0; p < POSITION_NUM && !rubyTeam.athletes[i].is_injured; ++p)
+                for (int p = 0; p < POSITION_NUM && !rugbyTeam.athletes[i].is_injured; ++p)
                 {
-                    if (rubyTeam.athletes[i].position.Equals(Positions[p]))
+                    if (rugbyTeam.athletes[i].position.Equals(Positions[p]))
                     {
-                        rugbyAthletes[p].Add(rubyTeam.athletes[i]);
+                        rugbyAthletes[p].Add(rugbyTeam.athletes[i]);
                         break;
                     }
                 }
             }
         }
 
-        public void OrganizeSquads()
+        private void ShowSquads(int[] aTeam)
         {
-            for (int j = 0; j < rugbyTeam.squads.Count; ++j)
+            for (int j = 0; rugbyTeam != null && j < rugbyTeam.squads.Count; ++j)
             {
                 readyPositions = new List<List<string>>();
                 missedPositions = new List<string>();
 
                 for (int a = 0; a < aTeam.Length; ++a)
-                    RecordReadyAndMissedPlayers(readyPositions, missedPositions, a);
+                    RecordReadyAndMissedPlayers(readyPositions, missedPositions, aTeam, a);
 
                 ShowSquadsInfo(j);
             }
         }
 
-        private void RecordReadyAndMissedPlayers(List<List<string>> readyPositions, List<String> missedPositions, int p)
+        private void RecordReadyAndMissedPlayers(List<List<string>> readyPositions, List<String> missedPositions, int[] aTeam, int p)
         {
             for (int i = 0; i < aTeam[p]; ++i)
             {
@@ -85,11 +96,12 @@ namespace SportsViewer.TeamMagr
             }
         }
 
+        //Could put more player information, and more flexible way
         private List<string> GetAPlayerInfo(int p)
         {
             List<string> player = new List<string>();
-            player.Add(rugbyAthletes[p].First().name);
-            player.Add(Positions[p]);
+            player.Add("Player Nmae: " + rugbyAthletes[p].First().name + "\t");
+            player.Add("Player Position: " + Positions[p] + "\t");
             return player;
         }
 
@@ -99,11 +111,21 @@ namespace SportsViewer.TeamMagr
             Console.WriteLine("Squad Name: " + rugbyTeam.squads[squadID].name);
             Console.WriteLine("Squad id: " + rugbyTeam.squads[squadID].id);
 
-            for (int r = 0; r < readyPositions.Count; ++r)
+            ShowReadyPlayers();
+
+            ShowMissedPositions();
+        }
+
+        private void ShowReadyPlayers()
+        {
+            for (int r = 0; readyPositions != null && r < readyPositions.Count; ++r)
                 for (int i = 0; i < readyPositions[r].Count; ++i)
                     Console.WriteLine(readyPositions[r][i]);
+        }
 
-            if (missedPositions.Count > 0)
+        private void ShowMissedPositions()
+        {
+            if (missedPositions != null && missedPositions.Count > 0)
             {
                 Console.WriteLine("Missed positions:");
                 for (int m = 0; m < missedPositions.Count; ++m)

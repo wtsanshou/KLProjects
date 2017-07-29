@@ -8,7 +8,6 @@ namespace SportsViewer.TeamMagr
 {
     interface TeamManagement
     {
-        void ClassifyPositions();
         void OrganizeSquads();
     }
 }

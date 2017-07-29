@@ -32,7 +32,6 @@ namespace SportsViewer
 
                 TeamManagement rubyTeamMagr = new RugbyTeamManagement(rubyTeam);
 
-                rubyTeamMagr.ClassifyPositions();
                 rubyTeamMagr.OrganizeSquads();
             }
         }
